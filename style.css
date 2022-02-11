@@ -1,0 +1,12 @@
+ul.wpb_page_list {
+  list-style: none;
+  list-style-type: none;
+}
+
+.wpb_page_list li.current_page_item {
+  font-weight: bold;
+}
+
+.wpb_page_list li.current_page_item::before {
+  content: "» ";
+}
