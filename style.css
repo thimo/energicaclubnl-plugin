@@ -17,11 +17,12 @@ ul.wpb_page_list {
   display: none;
 }
 
-/* Improved styling for tribe */
+/* Price tables  */
 .elementor-widget-price-table .elementor-widget-container {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
+/* Improved styling for tribe */
 .tribe-events-widget .tribe-events-widget-events-list__event-row--featured .tribe-events-widget-events-list__event-date-tag-datetime:after, .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
 	background-color: #77BE1F !important;
 }
