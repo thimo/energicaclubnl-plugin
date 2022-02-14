@@ -27,10 +27,23 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 add_filter('login_display_language_dropdown', '__return_false');
 
 // Load custom CSS and Javascript
-function enqueue_related_pages_scripts_and_styles()
-{
+function enqueue_related_pages_scripts_and_styles() {
   wp_enqueue_style('related-styles', plugins_url('/style.css', __FILE__));
   wp_enqueue_script('releated-script', plugins_url('/script.js', __FILE__), array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'enqueue_related_pages_scripts_and_styles');
+
+/* Add cart empty / not empty body class. */
+function wc_add_cart_status_class($classes) {
+  if (function_exists('WC')) {
+    $cart = WC()->cart;
+    if (isset($cart) && is_callable(array($cart, 'get_cart_contents_count'))) {
+      $items = $cart->get_cart_contents_count();
+      $classes[] = $items ? 'wc_cart_has_items' : 'wc_cart_is_empty';
+    }
+  }
+  return $classes;
+}
+add_filter('body_class', 'wc_add_cart_status_class');
+
 ?>

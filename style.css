@@ -1,3 +1,4 @@
+/* Styling for page switcher as used in FAQ */
 ul.wpb_page_list {
   list-style: none;
   list-style-type: none;
@@ -10,3 +11,9 @@ ul.wpb_page_list {
 .wpb_page_list li.current_page_item::before {
   content: "» ";
 }
+
+/* Hide WooCommerce card if empty */
+.wc_cart_is_empty .header-cart-link-wrap {
+  display: none;
+}
+
