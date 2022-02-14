@@ -17,3 +17,38 @@ ul.wpb_page_list {
   display: none;
 }
 
+/* Improved styling for tribe */
+.elementor-widget-price-table .elementor-widget-container {
+	background-color: transparent;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__event-row--featured .tribe-events-widget-events-list__event-date-tag-datetime:after, .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
+	background-color: #77BE1F !important;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link {
+	color: #77BE1F !important;
+	text-transform: none !important;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link:hover {
+    border-bottom-color: #77BE1F !important;
+}
+
+h3.tribe-common-h6 {
+	font-size: 20px !important;
+	font-weight: 500 !important;
+}
+
+.tribe-common .tribe-common-c-svgicon {
+	color: #77be1f !important;
+}
+
+.tribe-events-widget {
+	margin-bottom: 0 !important;
+}
+
+/* Hide breadcrumbs on homepage */
+.home #breadcrumbs {
+  display: none;
+}
