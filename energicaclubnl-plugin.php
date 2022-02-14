@@ -33,7 +33,7 @@ function enqueue_related_pages_scripts_and_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_related_pages_scripts_and_styles');
 
-/* Add cart empty / not empty body class. */
+// Add cart empty / not empty body class.
 function wc_add_cart_status_class($classes) {
   if (function_exists('WC')) {
     $cart = WC()->cart;
@@ -45,5 +45,9 @@ function wc_add_cart_status_class($classes) {
   return $classes;
 }
 add_filter('body_class', 'wc_add_cart_status_class');
+
+// Turn off the new calendar subscription links and just shows the old download link.
+// https://theeventscalendar.com/knowledgebase/k/remove-ical-and-google-calendar-links-from-single-event-views/
+add_filter( 'tec_views_v2_use_subscribe_links', '__return_false' );
 
 ?>
