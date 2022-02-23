@@ -27,6 +27,10 @@ ul.wpb_page_list {
 	line-height: 1.3 !important;
 }
 
+.elementor-slides .swiper-slide-inner .elementor-slide-heading {
+	line-height: 1.3;
+}
+
 /* Improved styling for tribe */
 .tribe-events-widget .tribe-events-widget-events-list__event-row--featured .tribe-events-widget-events-list__event-date-tag-datetime:after, .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
 	background-color: #77BE1F !important;
@@ -55,6 +59,25 @@ h3.tribe-common-h6 {
 }
 
 /* Hide breadcrumbs on homepage */
-.home #breadcrumbs {
+.home #breadcrumbs, .home .bread {
   display: none;
+}
+
+/* Bread breadcrumbs */
+.bread {
+  list-style-type: none;
+	max-width: 1200px;
+	margin: auto;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.bread li {
+  display:inline-block;
+}
+
+.bread li.crumb:last-child a {
+  text-decoration: none;
+  pointer-events: none;
+  color: inherit;
 }

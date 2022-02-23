@@ -1,8 +1,13 @@
 <?php
-/*
-Plugin Name: EnergicaClub.nl Site Plugin
-Description: Site specific code changes for energicaclub.nl
+/**
+ * Plugin Name: EnergicaClub.nl Site Plugin
+ * Description: Site specific code changes for energicaclub.nl
+ * Version: 1.0.1
+ * Author: Thimo Jansen
+ * GitHub Plugin URI: http://github.com/thimo/energicaclubnl-plugin
 */
+
+include(plugin_dir_path(__FILE__) . 'where-is-my-bread.php');
 
 // https://www.wpbeginner.com/wp-tutorials/how-to-display-a-list-of-child-pages-for-a-parent-page-in-wordpress/
 function wpb_list_child_pages() {
