@@ -23,12 +23,9 @@ ul.wpb_page_list {
 }
 
 .elementor-heading-title,
-.elementor-price-table .elementor-price-table__features-list li {
-	line-height: 1.3 !important;
-}
-
+.elementor-price-table .elementor-price-table__features-list li,
 .elementor-slides .swiper-slide-inner .elementor-slide-heading {
-	line-height: 1.3;
+	line-height: 1.3 !important;
 }
 
 /* Improved styling for tribe */
