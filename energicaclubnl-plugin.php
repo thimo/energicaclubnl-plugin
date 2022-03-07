@@ -2,7 +2,7 @@
 /**
  * Plugin Name: EnergicaClub.nl Site Plugin
  * Description: Site specific code changes for energicaclub.nl
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Thimo Jansen
  * GitHub Plugin URI: http://github.com/thimo/energicaclubnl-plugin
 */

@@ -78,3 +78,9 @@ h3.tribe-common-h6 {
   pointer-events: none;
   color: inherit;
 }
+
+/* Prevent part of comments secion being overlapped by content above it */
+.sticky-header #comments:before {
+	margin-top: 0 !important;
+	height: 0 !important;
+}
