@@ -18,6 +18,8 @@ if (!function_exists('get_the_crumbs')) {
    * @return Array Crumbs array.
    */
   function get_the_crumbs() {
+    global $post;
+
     $flour = $_SERVER['REQUEST_URI'];
 
     if (str_contains($flour, '?')) {
@@ -36,7 +38,13 @@ if (!function_exists('get_the_crumbs')) {
       if (!empty($crumb)) {
         $slug = esc_html($crumb);
 
-        $url = esc_url($_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/' . substr(implode('/', $flour), 0, strpos(implode('/', $flour), $crumb)) . $crumb . '/');
+        if ($slug == 'discussion') {
+          $parent_id = $post->post_parent;
+          $url = get_permalink($parent_id);
+          $slug = get_post($parent_id)->post_name;
+        } else {
+          $url = esc_url($_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/' . substr(implode('/', $flour), 0, strpos(implode('/', $flour), $crumb)) . $crumb . '/');
+        }
 
         array_push(
           $crumbs,
