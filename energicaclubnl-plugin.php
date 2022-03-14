@@ -55,4 +55,12 @@ add_filter('body_class', 'wc_add_cart_status_class');
 // https://theeventscalendar.com/knowledgebase/k/remove-ical-and-google-calendar-links-from-single-event-views/
 add_filter( 'tec_views_v2_use_subscribe_links', '__return_false' );
 
+// Removes the word "Gratis" when cost is a range from free
+function tribe_remove_free_from_range($cost, $post_id, $with_currency_symbol)
+{
+  $cost = str_replace('Gratis – ', '', $cost);
+  return $cost;
+}
+add_filter('tribe_get_cost', 'tribe_remove_free_from_range', 10, 3);
+
 ?>
